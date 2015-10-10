@@ -156,15 +156,14 @@ class peoples
 						cout << "Removal successful: " << nme << endl;
 						return;
 					}
-					previous = previous->getnext(); 
-					del = del->getnext();
+					previous = now->getnext(); 
 
 					delete now;
 					cout << "Removal successful: " << nme << endl;
 					return;	
 				}
-				previous = del;
-				del = del->getnext();
+				previous = now;
+				now = now->getnext();
 			}
 			cout << "ERROR: Not found for Removal: " << nme << endl;
 		}
